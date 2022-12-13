@@ -25,17 +25,17 @@ func TestBFS(t *testing.T) {
   graphAdj := NewGraphAdj[string, int]()
 
   e1 := Edge[string, int]{
-    u:         "r",
-    v:         "v",
-    w:         0,
+    U:         "r",
+    V:         "v",
+    W:         0,
     notDirect: true,
   }
   graphAdj.AddEdge(&e1)
 
   e2 := Edge[string, int]{
-    u:         "r",
-    v:         "s",
-    w:         0,
+    U:         "r",
+    V:         "s",
+    W:         0,
     notDirect: true,
   }
   graphAdj.AddEdge(&e2)
@@ -72,9 +72,9 @@ func TestDFS(t *testing.T) {
   graphAdj := NewGraphAdj[string, int]()
 
   e3 := Edge[string, int]{
-    u:         "x",
-    v:         "v",
-    w:         0,
+    U:         "x",
+    V:         "v",
+    W:         0,
     notDirect: false,
   }
   graphAdj.AddEdge(&e3)
@@ -109,9 +109,9 @@ func TestTopologicalSort(t *testing.T) {
   graphAdj := NewGraphAdj[string, int]()
 
   e3 := Edge[string, int]{
-    u:         "shirt",
-    v:         "tie",
-    w:         0,
+    U:         "shirt",
+    V:         "tie",
+    W:         0,
     notDirect: false,
   }
   graphAdj.AddEdge(&e3)
@@ -142,9 +142,9 @@ func TestStrongConnectedComponents(t *testing.T) {
   graphAdj := NewGraphAdj[string, int]()
 
   e3 := Edge[string, int]{
-    u:         "a",
-    v:         "b",
-    w:         0,
+    U:         "a",
+    V:         "b",
+    W:         0,
     notDirect: false,
   }
   graphAdj.AddEdge(&e3)
