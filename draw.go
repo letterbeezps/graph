@@ -33,7 +33,7 @@ func (g GraphAdj[Vertex, Weight]) Draw(drawWeight bool) {
 		}
 
 		for _, e := range v {
-			v, err := VertexToString(e.v)
+			v, err := VertexToString(e.V)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -46,7 +46,7 @@ func (g GraphAdj[Vertex, Weight]) Draw(drawWeight bool) {
 				if err != nil {
 					log.Fatal(err)
 				}
-				label, err := VertexToString(e.w)
+				label, err := VertexToString(e.W)
 				if err != nil {
 					log.Fatal(err)
 				}

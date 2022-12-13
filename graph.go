@@ -25,15 +25,15 @@ func VertexToString(x interface{}) (string, error) {
 }
 
 type Edge[Vertex vertex, Weight ordered] struct {
-	u         Vertex
-	v         Vertex
-	w         Weight
+	U         Vertex
+	V         Vertex
+	W         Weight
 	notDirect bool
 }
 
 type E[Vertex vertex, Weight ordered] struct {
-	v Vertex
-	w Weight
+	V Vertex
+	W Weight
 }
 
 type GraphAdj[Vertex vertex, Weight ordered] struct {
@@ -44,7 +44,7 @@ type GraphAdj[Vertex vertex, Weight ordered] struct {
 }
 
 type DfsRet[Vertex vertex] struct {
-	v          Vertex
+	V          Vertex
 	findTime   int
 	finishTime int
 }
@@ -58,15 +58,15 @@ func NewGraphAdj[Vertex vertex, Weight ordered]() GraphAdj[Vertex, Weight] {
 }
 
 func (g GraphAdj[Vertex, Weight]) AddEdge(e *Edge[Vertex, Weight]) {
-	g.data[e.u] = append(g.data[e.u], &E[Vertex, Weight]{
-		v: e.v,
-		w: e.w,
+	g.data[e.U] = append(g.data[e.U], &E[Vertex, Weight]{
+		V: e.V,
+		W: e.W,
 	})
 
 	if e.notDirect {
-		g.data[e.v] = append(g.data[e.v], &E[Vertex, Weight]{
-			v: e.u,
-			w: e.w,
+		g.data[e.V] = append(g.data[e.V], &E[Vertex, Weight]{
+			V: e.U,
+			W: e.W,
 		})
 	}
 }
@@ -82,9 +82,9 @@ func (g GraphAdj[Vertex, Weight]) Transpose() GraphAdj[Vertex, Weight] {
 	for u, edges := range g.data {
 		if len(edges) > 0 {
 			for _, e := range edges {
-				ret.data[e.v] = append(ret.data[e.v], &E[Vertex, Weight]{
-					v: u,
-					w: e.w,
+				ret.data[e.V] = append(ret.data[e.V], &E[Vertex, Weight]{
+					V: u,
+					W: e.W,
 				})
 			}
 		} else {

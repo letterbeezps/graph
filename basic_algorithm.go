@@ -22,12 +22,12 @@ func (g GraphAdj[Vertex, Weight]) Bfs(s Vertex, visitFunc func(Vertex) bool) []V
 		stack = stack[1:]
 
 		for _, e := range g.data[u] {
-			if _, ok := visited[e.v]; !ok {
-				visited[e.v] = struct{}{}
-				ret = append(ret, e.v)
-				stack = append(stack, e.v)
+			if _, ok := visited[e.V]; !ok {
+				visited[e.V] = struct{}{}
+				ret = append(ret, e.V)
+				stack = append(stack, e.V)
 				if visitFunc != nil {
-					visitFunc(e.v)
+					visitFunc(e.V)
 				}
 			} else {
 				g.HasCycle = true
@@ -79,7 +79,7 @@ func (g GraphAdj[Vertex, Weight]) dfsVisit(
 
 	*time += 1
 	node := DfsRet[Vertex]{
-		v:        u,
+		V:        u,
 		findTime: *time,
 	}
 
@@ -89,8 +89,8 @@ func (g GraphAdj[Vertex, Weight]) dfsVisit(
 	}
 
 	for _, e := range g.data[u] {
-		if _, ok := visited[e.v]; !ok {
-			g.dfsVisit(e.v, visited, ret, time, visitFunc)
+		if _, ok := visited[e.V]; !ok {
+			g.dfsVisit(e.V, visited, ret, time, visitFunc)
 		} else {
 			g.HasCycle = true
 		}
@@ -139,8 +139,8 @@ func (g GraphAdj[Vertex, Weight]) StrongConnectedComponents() [][]Vertex {
 	time := 0
 
 	for _, ret := range dfsRet {
-		if _, ok := visited[ret.v]; !ok {
-			gt.dfsVisit(ret.v, visited, &gtDfsret, &time, nil)
+		if _, ok := visited[ret.V]; !ok {
+			gt.dfsVisit(ret.V, visited, &gtDfsret, &time, nil)
 		}
 	}
 
@@ -155,7 +155,7 @@ func (g GraphAdj[Vertex, Weight]) StrongConnectedComponents() [][]Vertex {
 	tmp := []Vertex{}
 	for _, v := range gtDfsret {
 
-		tmp = append(tmp, v.v)
+		tmp = append(tmp, v.V)
 		if v.finishTime == v.findTime+1 {
 			ret = append(ret, tmp)
 			tmp = []Vertex{}
