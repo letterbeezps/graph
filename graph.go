@@ -28,7 +28,7 @@ type Edge[Vertex vertex, Weight ordered] struct {
 	U         Vertex
 	V         Vertex
 	W         Weight
-	notDirect bool
+	NotDirect bool
 }
 
 type E[Vertex vertex, Weight ordered] struct {
@@ -37,10 +37,11 @@ type E[Vertex vertex, Weight ordered] struct {
 }
 
 type GraphAdj[Vertex vertex, Weight ordered] struct {
-	data     map[Vertex][]*E[Vertex, Weight]
-	edges    []*Edge[Vertex, Weight]
-	HasCycle bool
-	Logger   *log.Logger
+	data      map[Vertex][]*E[Vertex, Weight]
+	Edges     []*Edge[Vertex, Weight]
+	HasCycle  bool
+	NotDirect bool
+	Logger    *log.Logger
 }
 
 type DfsRet[Vertex vertex] struct {
@@ -52,18 +53,22 @@ type DfsRet[Vertex vertex] struct {
 func NewGraphAdj[Vertex vertex, Weight ordered]() GraphAdj[Vertex, Weight] {
 	return GraphAdj[Vertex, Weight]{
 		data:   map[Vertex][]*E[Vertex, Weight]{},
-		edges:  []*Edge[Vertex, Weight]{},
+		Edges:  []*Edge[Vertex, Weight]{},
 		Logger: log.Default(),
 	}
 }
 
 func (g GraphAdj[Vertex, Weight]) AddEdge(e *Edge[Vertex, Weight]) {
+	if g.NotDirect && !e.NotDirect {
+		g.Logger.Fatal("graph is undirected, but get an directed edgs", *e)
+		return
+	}
 	g.data[e.U] = append(g.data[e.U], &E[Vertex, Weight]{
 		V: e.V,
 		W: e.W,
 	})
 
-	if e.notDirect {
+	if e.NotDirect {
 		g.data[e.V] = append(g.data[e.V], &E[Vertex, Weight]{
 			V: e.U,
 			W: e.W,

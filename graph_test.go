@@ -28,7 +28,7 @@ func TestBFS(t *testing.T) {
 		U:         "r",
 		V:         "v",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e1)
 
@@ -36,7 +36,7 @@ func TestBFS(t *testing.T) {
 		U:         "r",
 		V:         "s",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e2)
 
@@ -44,7 +44,7 @@ func TestBFS(t *testing.T) {
 		U:         "s",
 		V:         "w",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e3)
 
@@ -52,7 +52,7 @@ func TestBFS(t *testing.T) {
 		U:         "t",
 		V:         "w",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e4)
 
@@ -60,7 +60,7 @@ func TestBFS(t *testing.T) {
 		U:         "t",
 		V:         "u",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e5)
 
@@ -68,7 +68,7 @@ func TestBFS(t *testing.T) {
 		U:         "t",
 		V:         "x",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e6)
 
@@ -76,7 +76,7 @@ func TestBFS(t *testing.T) {
 		U:         "w",
 		V:         "x",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e7)
 
@@ -84,7 +84,7 @@ func TestBFS(t *testing.T) {
 		U:         "u",
 		V:         "x",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e8)
 
@@ -92,7 +92,7 @@ func TestBFS(t *testing.T) {
 		U:         "y",
 		V:         "x",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e9)
 
@@ -100,7 +100,7 @@ func TestBFS(t *testing.T) {
 		U:         "y",
 		V:         "u",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e10)
 
@@ -122,7 +122,7 @@ func TestDFS(t *testing.T) {
 		U:         "x",
 		V:         "v",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e3)
 
@@ -130,7 +130,7 @@ func TestDFS(t *testing.T) {
 		U:         "v",
 		V:         "y",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e4)
 
@@ -138,7 +138,7 @@ func TestDFS(t *testing.T) {
 		U:         "y",
 		V:         "x",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e5)
 
@@ -146,7 +146,7 @@ func TestDFS(t *testing.T) {
 		U:         "u",
 		V:         "x",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e1)
 
@@ -154,7 +154,7 @@ func TestDFS(t *testing.T) {
 		U:         "w",
 		V:         "y",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e6)
 
@@ -162,7 +162,7 @@ func TestDFS(t *testing.T) {
 		U:         "w",
 		V:         "z",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e7)
 
@@ -170,7 +170,7 @@ func TestDFS(t *testing.T) {
 		U:         "u",
 		V:         "v",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e2)
 
@@ -178,7 +178,7 @@ func TestDFS(t *testing.T) {
 		U:         "z",
 		V:         "z",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e8)
 
@@ -199,7 +199,7 @@ func TestDfsWithStart(t *testing.T) {
 		U:         "u",
 		V:         "x",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e1)
 
@@ -207,7 +207,7 @@ func TestDfsWithStart(t *testing.T) {
 		U:         "u",
 		V:         "v",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e2)
 
@@ -215,7 +215,7 @@ func TestDfsWithStart(t *testing.T) {
 		U:         "x",
 		V:         "v",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e3)
 
@@ -223,7 +223,7 @@ func TestDfsWithStart(t *testing.T) {
 		U:         "v",
 		V:         "y",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e4)
 
@@ -231,7 +231,7 @@ func TestDfsWithStart(t *testing.T) {
 		U:         "y",
 		V:         "x",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e5)
 
@@ -239,7 +239,7 @@ func TestDfsWithStart(t *testing.T) {
 		U:         "w",
 		V:         "y",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e6)
 
@@ -247,7 +247,7 @@ func TestDfsWithStart(t *testing.T) {
 		U:         "w",
 		V:         "z",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e7)
 
@@ -255,7 +255,7 @@ func TestDfsWithStart(t *testing.T) {
 		U:         "z",
 		V:         "z",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e8)
 
@@ -279,7 +279,7 @@ func TestTranspose(t *testing.T) {
 		U:         "r",
 		V:         "v",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e1)
 
@@ -287,7 +287,7 @@ func TestTranspose(t *testing.T) {
 		U:         "r",
 		V:         "s",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e2)
 
@@ -295,7 +295,7 @@ func TestTranspose(t *testing.T) {
 		U:         "s",
 		V:         "w",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e3)
 
@@ -303,7 +303,7 @@ func TestTranspose(t *testing.T) {
 		U:         "t",
 		V:         "w",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e4)
 
@@ -311,7 +311,7 @@ func TestTranspose(t *testing.T) {
 		U:         "t",
 		V:         "u",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e5)
 
@@ -319,7 +319,7 @@ func TestTranspose(t *testing.T) {
 		U:         "t",
 		V:         "x",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e6)
 
@@ -327,7 +327,7 @@ func TestTranspose(t *testing.T) {
 		U:         "w",
 		V:         "x",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e7)
 
@@ -335,7 +335,7 @@ func TestTranspose(t *testing.T) {
 		U:         "u",
 		V:         "x",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e8)
 
@@ -343,7 +343,7 @@ func TestTranspose(t *testing.T) {
 		U:         "y",
 		V:         "x",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e9)
 
@@ -351,7 +351,7 @@ func TestTranspose(t *testing.T) {
 		U:         "y",
 		V:         "u",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e10)
 

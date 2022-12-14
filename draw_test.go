@@ -9,7 +9,7 @@ func TestDraw(t *testing.T) {
 		U:         "r",
 		V:         "v",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e1)
 
@@ -17,7 +17,7 @@ func TestDraw(t *testing.T) {
 		U:         "r",
 		V:         "s",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e2)
 
@@ -25,7 +25,7 @@ func TestDraw(t *testing.T) {
 		U:         "s",
 		V:         "w",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e3)
 
@@ -33,7 +33,7 @@ func TestDraw(t *testing.T) {
 		U:         "t",
 		V:         "w",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e4)
 
@@ -41,7 +41,7 @@ func TestDraw(t *testing.T) {
 		U:         "t",
 		V:         "u",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e5)
 
@@ -49,7 +49,7 @@ func TestDraw(t *testing.T) {
 		U:         "t",
 		V:         "x",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e6)
 
@@ -57,7 +57,7 @@ func TestDraw(t *testing.T) {
 		U:         "w",
 		V:         "x",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e7)
 
@@ -65,7 +65,7 @@ func TestDraw(t *testing.T) {
 		U:         "u",
 		V:         "x",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e8)
 
@@ -73,7 +73,7 @@ func TestDraw(t *testing.T) {
 		U:         "y",
 		V:         "x",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e9)
 
@@ -81,7 +81,7 @@ func TestDraw(t *testing.T) {
 		U:         "y",
 		V:         "u",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e10)
 

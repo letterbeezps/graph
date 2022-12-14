@@ -12,7 +12,7 @@ func TestDepthFirstForest(t *testing.T) {
 		U:         "x",
 		V:         "v",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e3)
 
@@ -20,7 +20,7 @@ func TestDepthFirstForest(t *testing.T) {
 		U:         "y",
 		V:         "x",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e5)
 
@@ -28,7 +28,7 @@ func TestDepthFirstForest(t *testing.T) {
 		U:         "v",
 		V:         "y",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e4)
 
@@ -36,7 +36,7 @@ func TestDepthFirstForest(t *testing.T) {
 		U:         "z",
 		V:         "z",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e8)
 
@@ -44,7 +44,7 @@ func TestDepthFirstForest(t *testing.T) {
 		U:         "u",
 		V:         "x",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e1)
 
@@ -52,7 +52,7 @@ func TestDepthFirstForest(t *testing.T) {
 		U:         "w",
 		V:         "y",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e6)
 
@@ -60,7 +60,7 @@ func TestDepthFirstForest(t *testing.T) {
 		U:         "w",
 		V:         "z",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e7)
 
@@ -68,7 +68,7 @@ func TestDepthFirstForest(t *testing.T) {
 		U:         "u",
 		V:         "v",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e2)
 
@@ -87,7 +87,7 @@ func TestStrongConnectedComponents(t *testing.T) {
 		U:         "a",
 		V:         "b",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e3)
 
@@ -95,7 +95,7 @@ func TestStrongConnectedComponents(t *testing.T) {
 		U:         "b",
 		V:         "c",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e5)
 
@@ -103,7 +103,7 @@ func TestStrongConnectedComponents(t *testing.T) {
 		U:         "b",
 		V:         "e",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e1)
 
@@ -111,7 +111,7 @@ func TestStrongConnectedComponents(t *testing.T) {
 		U:         "b",
 		V:         "f",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e6)
 
@@ -119,7 +119,7 @@ func TestStrongConnectedComponents(t *testing.T) {
 		U:         "c",
 		V:         "d",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e4)
 
@@ -127,7 +127,7 @@ func TestStrongConnectedComponents(t *testing.T) {
 		U:         "c",
 		V:         "g",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e8)
 
@@ -135,7 +135,7 @@ func TestStrongConnectedComponents(t *testing.T) {
 		U:         "d",
 		V:         "h",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e7)
 
@@ -143,7 +143,7 @@ func TestStrongConnectedComponents(t *testing.T) {
 		U:         "h",
 		V:         "h",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e2)
 
@@ -151,7 +151,7 @@ func TestStrongConnectedComponents(t *testing.T) {
 		U:         "g",
 		V:         "h",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e11)
 
@@ -159,7 +159,7 @@ func TestStrongConnectedComponents(t *testing.T) {
 		U:         "g",
 		V:         "f",
 		W:         0,
-		notDirect: true,
+		NotDirect: true,
 	}
 	graphAdj.AddEdge(&e12)
 
@@ -167,7 +167,7 @@ func TestStrongConnectedComponents(t *testing.T) {
 		U:         "e",
 		V:         "f",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e13)
 
@@ -175,7 +175,7 @@ func TestStrongConnectedComponents(t *testing.T) {
 		U:         "e",
 		V:         "a",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e14)
 

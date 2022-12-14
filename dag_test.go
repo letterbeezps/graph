@@ -12,7 +12,7 @@ func TestTopologicalSort(t *testing.T) {
 		U:         "shirt",
 		V:         "tie",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e3)
 
@@ -20,7 +20,7 @@ func TestTopologicalSort(t *testing.T) {
 		U:         "tie",
 		V:         "jacket",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e5)
 
@@ -28,7 +28,7 @@ func TestTopologicalSort(t *testing.T) {
 		U:         "shirt",
 		V:         "belt",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e4)
 
@@ -36,7 +36,7 @@ func TestTopologicalSort(t *testing.T) {
 		U:         "belt",
 		V:         "jacket",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e8)
 
@@ -44,7 +44,7 @@ func TestTopologicalSort(t *testing.T) {
 		U:         "panties",
 		V:         "pants",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e1)
 
@@ -52,7 +52,7 @@ func TestTopologicalSort(t *testing.T) {
 		U:         "panties",
 		V:         "shoe",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e9)
 
@@ -60,7 +60,7 @@ func TestTopologicalSort(t *testing.T) {
 		U:         "pants",
 		V:         "belt",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e6)
 
@@ -68,7 +68,7 @@ func TestTopologicalSort(t *testing.T) {
 		U:         "pants",
 		V:         "shoe",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e7)
 
@@ -76,7 +76,7 @@ func TestTopologicalSort(t *testing.T) {
 		U:         "socks",
 		V:         "shoe",
 		W:         0,
-		notDirect: false,
+		NotDirect: false,
 	}
 	graphAdj.AddEdge(&e2)
 

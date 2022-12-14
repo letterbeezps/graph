@@ -4,6 +4,7 @@
 <!-- code_chunk_output -->
 
 - [Graph](#graph)
+  - [start](#start)
   - [BFS](#bfs)
   - [DFS](#dfs)
     - [depth-first forest](#depth-first-forest)
@@ -16,15 +17,19 @@
 
 Use golang to implement some interesting graph algorithms
 
+## start
+
+> go get github.com/letterbeezps/graph
+
 ## BFS
 
 ![bfs](images/bfs.jpeg)
 
 ```golang
 func TestBFS(t *testing.T) {
-  graphAdj := NewGraphAdj[string, int]()
+  graphAdj := graph.NewGraphAdj[string, int]()
 
-  e1 := Edge[string, int]{
+  e1 := graph.Edge[string, int]{
     U:         "r",
     V:         "v",
     W:         0,
@@ -32,7 +37,7 @@ func TestBFS(t *testing.T) {
   }
   graphAdj.AddEdge(&e1)
 
-  e2 := Edge[string, int]{
+  e2 := graph.Edge[string, int]{
     U:         "r",
     V:         "s",
     W:         0,
@@ -69,9 +74,9 @@ Dfs not only returns the results of traversal, but also includes two important f
 
 ```go
 func TestDFS(t *testing.T) {
-  graphAdj := NewGraphAdj[string, int]()
+  graphAdj := graph.NewGraphAdj[string, int]()
 
-  e3 := Edge[string, int]{
+  e3 := graph.Edge[string, int]{
     U:         "x",
     V:         "v",
     W:         0,
@@ -106,9 +111,9 @@ only DAG can call method TopologicalSort
 
 ```go
 func TestTopologicalSort(t *testing.T) {
-  graphAdj := NewGraphAdj[string, int]()
+  graphAdj := graph.NewGraphAdj[string, int]()
 
-  e3 := Edge[string, int]{
+  e3 := graph.Edge[string, int]{
     U:         "shirt",
     V:         "tie",
     W:         0,
@@ -139,9 +144,9 @@ func TestTopologicalSort(t *testing.T) {
 
 ```go
 func TestStrongConnectedComponents(t *testing.T) {
-  graphAdj := NewGraphAdj[string, int]()
+  graphAdj := graph.NewGraphAdj[string, int]()
 
-  e3 := Edge[string, int]{
+  e3 := graph.Edge[string, int]{
     U:         "a",
     V:         "b",
     W:         0,
